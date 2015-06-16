@@ -16,6 +16,12 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+@mixin ellipsis() {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
 $bgDefault      : #ff8e0f;
 $bgHighlight    : #33CC33;
 $colDefault     : #f4f8f9;
@@ -25,7 +31,7 @@ $dropDown       : true;
   background-color: $bgDefault;
   border-radius: 0;
   margin-bottom: 0;
-  border-color: $bgHighlight;
+  border-color: $bgDefault;
   .navbar-brand {
     color: $colDefault;
     &:hover, &:focus { 
@@ -151,4 +157,65 @@ li {
 
 .img-responsive {
 	margin: 0;
+}
+
+.the-box {
+  -moz-box-shadow: 1px 1px 2px 0 #d0d0d0;
+  -webkit-box-shadow: 1px 1px 2px 0 #d0d0d0;
+  box-shadow: 1px 1px 2px 0 #d0d0d0;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-color: #e4e4e4 #bebebd #bebebd #e4e4e4;
+  margin-top: 50px;
+  margin-bottom: 15px;
+  padding: 15px;
+  border-radius: 25px;
+}
+
+.app-index {
+  text-align: center;
+}
+
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  border-spacing: 5px;
+}
+
+th {
+  background-color: #ff8e0f;
+}
+
+th, td {
+  padding: 10px;
+}
+
+table {
+  margin: 0 auto;
+  table-layout: fixed;
+}
+
+td:first-child + td {
+  max-width: 250px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+td:first-child {
+  max-width: 125px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+td:first-child + td + td {
+  text-align: center;
+  a {
+    color: red;
+    text-decoration: none;
+  }
+  a:hover {
+    font-weight: 900;
+  }
 }
