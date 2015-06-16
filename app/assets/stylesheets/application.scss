@@ -1,0 +1,154 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+$bgDefault      : #ff8e0f;
+$bgHighlight    : #33CC33;
+$colDefault     : #f4f8f9;
+$colHighlight   : #111110;
+$dropDown       : true;
+.navbar-default {
+  background-color: $bgDefault;
+  border-radius: 0;
+  margin-bottom: 0;
+  border-color: $bgHighlight;
+  .navbar-brand {
+    color: $colDefault;
+    &:hover, &:focus { 
+      color: $colHighlight; }}
+  .navbar-text {
+    color: $colDefault; }
+  .navbar-nav {
+    > li {
+      > a {
+        color: $colDefault;
+        &:hover,  &:focus {
+          color: $colHighlight; }}
+      @if $dropDown {
+        > .dropdown-menu {
+          background-color: $bgDefault;
+          > li > a {
+            color: $colDefault;
+            &:hover,  &:focus {
+              color: $colHighlight;
+              background-color: $bgHighlight; }}
+          .divider {
+            background-color: $bgHighlight;}}}
+    }
+    > .active {
+      > a, > a:hover, > a:focus {
+        color: $colHighlight;
+        background-color: $bgHighlight; }}
+    > .open {
+      > a, > a:hover, > a:focus {
+        color: $colHighlight;
+        background-color: $bgHighlight; }}}
+  .navbar-toggle {
+    border-color: $bgHighlight;
+    &:hover, &:focus {
+      background-color: $bgHighlight; }
+    .icon-bar {
+      background-color: $colDefault; }}
+  .navbar-collapse,
+  .navbar-form {
+    border-color: $colDefault; }
+  .navbar-link {
+    color: $colDefault;
+    &:hover {
+      color: $colHighlight; }}}
+@media (max-width: 767px) {
+  .navbar-default .navbar-nav .open .dropdown-menu {
+    > li > a {
+      color: $colDefault;
+      &:hover, &:focus {
+        color: $colHighlight; }}
+    > .active {
+      > a, > a:hover, > a:focus {
+        color: $colHighlight;
+        background-color: $bgHighlight; }}}
+}
+
+a.navbar-brand {
+	font: 400 100px/1.5 'Pacifico', Helvetica, sans-serif;
+	font-size: 25px;
+  	text-shadow: 3px 3px 0px rgba(0,0,0,0.1), 7px 7px 0px rgba(0,0,0,0.05);
+  	text-align: center;
+  	padding-top: 6px;
+}
+
+h1 {
+	font: 400 70px/1.5 'Pacifico', Helvetica, sans-serif;
+	text-shadow: 3px 3px 0px rgba(0,0,0,0.1), 7px 7px 0px rgba(0,0,0,0.05);
+	font-color: #ff8e0f;
+}
+
+h1:hover {
+	color: #ff8e0f;
+}
+
+body {
+	font-family: 'Montserrat';
+}
+
+.jumbotron {
+	padding-right: 25%;
+	padding-left: 25%;
+	padding-bottom: 80px;
+	margin-bottom: 0;
+}
+
+li {
+	list-style: none;
+	font-size: 18px;
+	padding-bottom: 7px;
+	img {
+		height: 50px;
+		-webkit-transition: all 0,3s ease;
+		-moz-transition: all 0,3s ease;
+		-o-transition: all 0,3s ease;
+		-ms-transition: all 0,3s ease;
+		transition: all 0,3s ease;
+		}
+	img:hover {
+		-webkit-filter: opacity(0.8);
+	}
+}
+
+.features li:hover {
+	color: #ff8e0f;
+	font-weight: bold;
+}
+
+.features {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.center-block {
+	display: block;
+	margin-left: 100px;
+	margin-right: 100px;
+	margin-top: 20px;
+}
+
+.photos {
+	max-width: 100px;
+}
+
+.img-responsive {
+	margin: 0;
+}
