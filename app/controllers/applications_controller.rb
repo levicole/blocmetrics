@@ -3,6 +3,7 @@ class ApplicationsController < ApplicationController
     @user = current_user
     @applications = @user.applications
     @application = Application.new
+    @events = @application.events.group_by(&:name)
   end
 
   def new
