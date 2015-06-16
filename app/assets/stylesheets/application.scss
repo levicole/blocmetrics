@@ -94,6 +94,9 @@ a.navbar-brand {
   	text-shadow: 3px 3px 0px rgba(0,0,0,0.1), 7px 7px 0px rgba(0,0,0,0.05);
   	text-align: center;
   	padding-top: 6px;
+    .glyphicon {
+      padding-top: 10px;
+    }
 }
 
 h1 {
@@ -218,4 +221,13 @@ td:first-child + td + td {
   a:hover {
     font-weight: 900;
   }
+}
+
+.btn-warning {
+  background-color: #ff8e0f !important;
+}
+
+.btn-warning:hover {
+  background-color: #FFA33A !important;
+  border-color: #FFA33A !important;
 }

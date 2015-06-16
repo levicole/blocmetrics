@@ -1,9 +1,9 @@
-<h5>Add a new item:</h5>
+<h4 align="center">Register a new application:</h4>
 
+<%= form_for @application, remote: true do |f| %>
 <div class="form-group">
-  <%= form_for @application, remote: true do |f| %>
-    <%= f.text_field :name, :class => 'form-control', placeholder: 'Application name' %>
-    <%= f.text_field :url, :class => 'form-control', value: 'http://' %>
+  <%= f.text_field :name, :class => 'form-control', placeholder: 'Application name' %>
+  <%= f.text_field :url, :class => 'form-control', value: 'http://' %>
 </div>
 
 <div class="form-group">

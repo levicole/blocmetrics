@@ -1,6 +1,6 @@
 <% if @application.valid? %>
-   $('.js-applications').fadeIn("<%= escape_javascript(render(@application)) %>");
-   $('.new-application').html("<%= escape_javascript(render partial: 'new', locals: { application: @new_item }) %>");
+   $('.js-applications').append("<%= escape_javascript(render(@application)) %>");
+   $('.new-application').html("<%= escape_javascript(render partial: 'new', locals: { user: @user, application: @new_application }) %>");
 <% else %>
    $('.new-application').html("<%= escape_javascript(render partial: 'new', locals: { application: @application }) %>");
 <% end %>

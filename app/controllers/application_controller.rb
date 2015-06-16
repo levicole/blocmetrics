@@ -10,9 +10,8 @@ class ApplicationController < ActionController::Base
     devise_parameter_sanitizer.for(:sign_up) << :name
   end
 
-  before_action :app_name
-  def app_name
-    @user = current_user
-    @application = @user.applications.name
+  def applications
+    @applications ||= current_user.applications
   end
+  helper_method :applications
 end

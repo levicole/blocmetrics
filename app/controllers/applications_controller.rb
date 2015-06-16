@@ -10,6 +10,7 @@ class ApplicationsController < ApplicationController
   end
 
   def create
+    @user = current_user
     @application = current_user.applications.build(app_params)
     @new_application = Application.new
     if @application.save

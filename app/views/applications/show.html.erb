@@ -1,17 +1,19 @@
 <div class="the-box col-xs-8 col-xs-offset-2">
   <h2 class="app-index">Your Applications</h2><br />
   <table>
-    <tr>
-      <th>App Name</th>
-      <th>URL</th>
-      <th>Delete?</th>
-    </tr>
-    <div class="js-items">
+    <thead>
+      <tr>
+        <th>App Name</th>
+        <th>URL</th>
+        <th>Delete?</th>`
+      </tr>
+    </thead>
+    <tbody class="js-applications">
       <%= render @applications %>
-    </div>
+    </tbody>
   </table>
   <hr>
   <div class="new-application">
-    <%= render partial: 'new' %>
+    <%= render partial: 'new', locals: { user: @user, application: @application } %>
   </div>
 </div>
