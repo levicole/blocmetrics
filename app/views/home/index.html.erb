@@ -7,7 +7,11 @@
       <li><img src="https://cdn0.iconfinder.com/data/icons/kameleon-free-pack-rounded/110/Analytics-128.png">&nbsp;Get to know your demographic</li>
       <li><img src="https://cdn4.iconfinder.com/data/icons/keynote-and-powerpoint-icons/256/Money-128.png">&nbsp;Make more money with less effort</li>
     </ul>
-    <%= link_to 'Sign Up for Free', '#', class: 'btn btn-success btn-lg center-block' %>
+    <% if current_user %>
+      <%= link_to 'Access Your Account', '#', class: 'btn btn-warning btn-lg center-block' %>
+    <% else %>
+      <%= link_to 'Sign Up for Free', new_user_registration_path, class: 'btn btn-success btn-lg center-block' %>
+    <% end %>
   </div>
 </div>
 
