@@ -4,6 +4,7 @@
   <title>Blocmetrics</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag "http://code.highcharts.com/highcharts.js", "chartkick" %>
   <%= csrf_meta_tags %>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="http://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet" type="text/css">
@@ -20,8 +21,8 @@
         <span class="icon-bar"></span>
       </button>
       <%= link_to root_path, :class => 'navbar-brand' do %>
-        <span class="glyphicon glyphicon-stats navbar-brand"></span>
-        Blocmetrics
+        <span class="glyphicon glyphicon-stats"></span>
+        &nbsp;Blocmetrics
       <% end %>
     </div>
 
@@ -29,7 +30,11 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
         <% if current_user %>
-          <li><%= link_to (current_user.name || current_user.email), edit_user_registration_path %></li>
+          <li><%= link_to edit_user_registration_path, :class => 'nav navbar-nav navbar-right' do %>
+          <span class="glyphicon glyphicon-pencil"></span>
+          <%= (current_user.name || current_user.email) %>
+          <% end %></li>
+          <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
         <% else %>
           <li><%= link_to "About", 'https://github.com/austinarchibald/blocmetrics', target: '_blank' %></li>
         <% end %>
