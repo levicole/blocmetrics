@@ -2,6 +2,10 @@ Rails.application.routes.draw do
   devise_for :users
   resources :applications
 
+  namespace :api, defaults: { format: :json } do
+    resources :events, only: [:create]
+  end
+
   root to: 'home#index'
 
   # The priority is based upon order of creation: first created -> highest priority.

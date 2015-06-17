@@ -1,21 +1,18 @@
 <div class="the-box col-xs-8 col-xs-offset-2">
-  <h2 class="app-index">Your Applications</h2><br />
+  <h2 class="app-index"><%= @application.name %></h2><br />
   <table>
     <thead>
       <tr>
-        <th>App Name</th>
-        <th>URL</th>
-        <th>Delete?</th>`
+        <th>Event</th>
+        <th>Count</th>
       </tr>
     </thead>
-    <tbody class="js-applications">
-      <%= render @applications %>
+    <tbody>
+      <tr><% @events.each do |name, events| %></tr>
+        <td><%= name %></td>
+        <td><%= events.length %></td>
+      <% end %>
     </tbody>
   </table>
-  <hr>
-  <div class="new-application">
-    <%= render partial: 'new', locals: { user: @user, application: @application } %>
-  </div>
-  <hr>
-  <%= @events %>
+  <%= link_to '&#8592; Back to Applications'.html_safe, applications_path, class: 'btn btn-warning' %>
 </div>

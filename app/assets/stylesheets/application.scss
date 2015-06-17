@@ -178,6 +178,13 @@ li {
 
 .app-index {
   text-align: center;
+  font: 400 60px/1.5 'Pacifico', Helvetica, sans-serif;
+  text-shadow: 3px 3px 0px rgba(0,0,0,0.1), 7px 7px 0px rgba(0,0,0,0.05);
+  font-color: #ff8e0f;
+}
+
+.app-index:hover {
+  color: #ff8e0f;
 }
 
 table, th, td {
@@ -188,6 +195,7 @@ table, th, td {
 
 th {
   background-color: #ff8e0f;
+  color: #FFFFFF;
 }
 
 th, td {
@@ -229,6 +237,15 @@ td:first-child + td + td {
 }
 
 .btn-warning:hover {
-  background-color: #FFA33A !important;
-  border-color: #FFA33A !important;
+  background-color: #F07900 !important;
+  border-color: #F07900 !important;
+}
+
+.btn-success {
+  background-color: #33CC33 !important;
+}
+
+.btn-success:hover {
+  background-color: #2AAC2B !important;
+  border-color: #2AAC2B !important;
 }

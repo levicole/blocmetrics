@@ -1,7 +1,7 @@
 require 'faker'
 
 # Create Users
-3.times do
+1.times do
   user = User.new(
     name:     Faker::Name.name,
     email:    Faker::Internet.email,
@@ -21,7 +21,7 @@ me.skip_confirmation!
 me.save!
 
 # Create Applications
-7.times do
+8.times do
   Application.create!(
     name: Faker::App.name,
     user: users.sample,
@@ -31,7 +31,7 @@ end
 applications = Application.all
 
 # Create Events
-30.times do
+60.times do
   event = Event.create!(
     name:        Faker::Hacker.ingverb,
     # user:        users.sample,

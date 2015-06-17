@@ -38,11 +38,11 @@
           <ul class="dropdown-menu" role="menu">
             <% if current_user %>
               <li><%= link_to 'Sign out', destroy_user_session_path, method: :delete, data: { confirm: "Ready to go already?" } %></li>
-              <li><%= link_to 'Your Applications', application_path(current_user) %></li>
+              <li><%= link_to 'Your Applications', applications_path %></li>
               <li class="divider"></li>
               <% applications.each do |app| %>
                 <%= content_tag :li do %>
-                  <%= link_to app.name, '#' %>
+                  <%= link_to app.name, app %>
                 <% end %>
               <% end %>
             <% else %>
