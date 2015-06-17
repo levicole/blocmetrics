@@ -6,6 +6,8 @@ Rails.application.routes.draw do
     resources :events, only: [:create]
   end
 
+  match "/api/events", to: "api/events#preflight", via: [:options]
+
   root to: 'home#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
