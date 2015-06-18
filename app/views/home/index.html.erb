@@ -8,7 +8,7 @@
       <li><img src="https://cdn4.iconfinder.com/data/icons/keynote-and-powerpoint-icons/256/Money-128.png">&nbsp;Make more money with less effort</li>
     </ul>
     <% if current_user %>
-      <%= link_to 'Access Your Applications', application_path(current_user), class: 'btn btn-warning btn-lg center-block' %>
+      <%= link_to 'Access Your Applications', applications_path, class: 'btn btn-warning btn-lg center-block' %>
     <% else %>
       <%= link_to 'Sign Up for Free', new_user_registration_path, class: 'btn btn-success btn-lg center-block' %>
     <% end %>

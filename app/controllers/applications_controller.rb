@@ -1,8 +1,13 @@
 class ApplicationsController < ApplicationController
+  def index
+    @applications = current_user.applications.all
+    @new_application = Application.new
+  end
+
   def show
     @user = current_user
-    @applications = @user.applications
-    @application = Application.new
+    @application = @user.applications.find(params[:id])
+    @events = @application.events.group_by(&:name)
   end
 
   def new

@@ -91,12 +91,17 @@ $dropDown       : true;
 a.navbar-brand {
 	font: 400 100px/1.5 'Pacifico', Helvetica, sans-serif;
 	font-size: 25px;
-  	text-shadow: 3px 3px 0px rgba(0,0,0,0.1), 7px 7px 0px rgba(0,0,0,0.05);
-  	text-align: center;
-  	padding-top: 6px;
-    .glyphicon {
-      padding-top: 10px;
-    }
+  text-shadow: 3px 3px 0px rgba(0,0,0,0.1), 7px 7px 0px rgba(0,0,0,0.05);
+  text-align: center;
+  padding-top: 9px;
+}
+
+.glyphicon-pencil {
+  font-size: 13px;
+  &:hover {
+    font-weight: 900;
+    text-shadow: 2px 2px 4px #666;
+  }
 }
 
 h1 {
@@ -126,20 +131,11 @@ li {
 	padding-bottom: 7px;
 	img {
 		height: 50px;
-		-webkit-transition: all 0,3s ease;
-		-moz-transition: all 0,3s ease;
-		-o-transition: all 0,3s ease;
-		-ms-transition: all 0,3s ease;
-		transition: all 0,3s ease;
-		}
-	img:hover {
-		-webkit-filter: opacity(0.8);
-	}
+  }
 }
 
 .features li:hover {
 	color: #ff8e0f;
-	font-weight: bold;
 }
 
 .features {
@@ -160,6 +156,7 @@ li {
 
 .img-responsive {
 	margin: 0;
+  width: 100%;
 }
 
 .the-box {
@@ -173,10 +170,18 @@ li {
   margin-bottom: 15px;
   padding: 15px;
   border-radius: 25px;
+  padding-top: 0px;
 }
 
 .app-index {
   text-align: center;
+  font: 400 60px/1.5 'Pacifico', Helvetica, sans-serif;
+  text-shadow: 3px 3px 0px rgba(0,0,0,0.1), 7px 7px 0px rgba(0,0,0,0.05);
+  font-color: #ff8e0f;
+}
+
+.app-index:hover {
+  color: #ff8e0f;
 }
 
 table, th, td {
@@ -187,6 +192,7 @@ table, th, td {
 
 th {
   background-color: #ff8e0f;
+  color: #FFFFFF;
 }
 
 th, td {
@@ -220,14 +226,25 @@ td:first-child + td + td {
   }
   a:hover {
     font-weight: 900;
+    text-shadow: 2px 2px 4px #666;
   }
 }
 
 .btn-warning {
   background-color: #ff8e0f !important;
+  margin-top: 10px;
 }
 
 .btn-warning:hover {
-  background-color: #FFA33A !important;
-  border-color: #FFA33A !important;
+  background-color: #F07900 !important;
+  border-color: #F07900 !important;
+}
+
+.btn-success {
+  background-color: #33CC33 !important;
+}
+
+.btn-success:hover {
+  background-color: #2AAC2B !important;
+  border-color: #2AAC2B !important;
 }

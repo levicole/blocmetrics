@@ -1,5 +1,5 @@
 <%= content_tag :tr, id: "application-#{application.id}" do %>
-  <td><%= application.name %> </td>
+  <td><%= link_to application.name, application %> </td>
   <td><%= application.url %></td>
   <td><%= link_to "", application, method: :delete, data: { confirm: "Are you sure? Deletion is FINAL." }, remote: true, class: 'glyphicon glyphicon-remove' %> </td>
 <% end %>
