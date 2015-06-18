@@ -2,8 +2,11 @@
   <%= link_to '&#8592; Back to Applications'.html_safe, applications_path, class: 'btn btn-warning' %> 
   <h2 class="app-index"><%= @application.name %></h2><br />
   <%= pie_chart @application.events.group(:name).count %>
-  <%= line_chart @application.events.group(:created_at).count %>
-  <%#= line_chart @application.events.group_by_day(:created_at).count %>
+  <% if Rails.env.production? %>
+    <%= line_chart @application.events.group_by_day(:created_at).count %>
+  <% else %>
+    <%= line_chart @application.events.group(:created_at).count %>
+  <% end %>
   <!-- groupdate doesn't support sqlite -->
 <!--   <table>
     <thead>

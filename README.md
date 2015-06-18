@@ -9,9 +9,9 @@ Now, suppose we wanted to track page visits.
 2) Add the following code to your site (either a new .js file or in `<script>` tags:
 
 ```
-var blocmetrics = function() {
+var blocmetrics = function(page_views) {
 	var _bm_event = {
-	event_name: "page visit",
+	event_name: page_views,
 	}
 
 	var _bm_request = new XMLHttpRequest();
@@ -23,7 +23,7 @@ var blocmetrics = function() {
 };
 
 $(document).ready(function(){
-    blocmetrics(window.location.origin);
+    blocmetrics(window.location.pathname);
   })
 ```
 
